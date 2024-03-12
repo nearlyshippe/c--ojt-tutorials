@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OJTtuutorial3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f36085cfa013145d1a9f8a9737c0544f0c4cea1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("OJTtuutorial3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OJTtuutorial3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

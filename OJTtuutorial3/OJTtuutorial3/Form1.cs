@@ -97,7 +97,7 @@ namespace OJTtuutorial3
             {
                 DateTime dob = dpDOB.Value;
                 DateTime Join = dpJoin.Value;
-                dataTable.Rows.Add(txtStaffNo.Text, pbStaff.BackgroundImage, txtStaffName, Join, cbType.Text, txtNRC.Text, gender, txtAge.Text, txtPh1.Text, txtPh2.Text, txtAddress.Text);
+                dataTable.Rows.Add(txtStaffNo.Text, pbStaff.Image, txtStaffName, Join, cbType.Text, txtNRC.Text, gender, txtAge.Text, txtPh1.Text, txtPh2.Text, txtAddress.Text);
             }
 
             GetNextStaffId();
@@ -107,7 +107,7 @@ namespace OJTtuutorial3
             OpenFileDialog fileDialog = new OpenFileDialog();
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
-                pbStaff.BackgroundImage = new Bitmap(fileDialog.FileName);
+                pbStaff.Image = new Bitmap(fileDialog.FileName);
             }
         }
 
@@ -176,6 +176,9 @@ namespace OJTtuutorial3
             newdata.Cells[8].Value = txtPh1.Text;
             newdata.Cells[9].Value = txtPh2.Text;
             newdata.Cells[10].Value = txtAddress.Text;
+
+            btnAdd.Visible = true;
+            btnUpdate.Visible = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
