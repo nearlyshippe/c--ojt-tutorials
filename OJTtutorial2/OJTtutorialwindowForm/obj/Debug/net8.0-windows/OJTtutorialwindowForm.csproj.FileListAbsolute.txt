@@ -1,0 +1,16 @@
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\bin\Debug\net8.0-windows\OJTtutorialwindowForm.exe
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\bin\Debug\net8.0-windows\OJTtutorialwindowForm.deps.json
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\bin\Debug\net8.0-windows\OJTtutorialwindowForm.runtimeconfig.json
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\bin\Debug\net8.0-windows\OJTtutorialwindowForm.dll
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\bin\Debug\net8.0-windows\OJTtutorialwindowForm.pdb
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.csproj.GenerateResource.cache
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.AssemblyInfoInputs.cache
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.AssemblyInfo.cs
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.dll
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\refint\OJTtutorialwindowForm.dll
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.pdb
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.genruntimeconfig.cache
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\ref\OJTtutorialwindowForm.dll
+D:\Programming\Projects\OJTtutorialwindowForm\OJTtutorialwindowForm\obj\Debug\net8.0-windows\OJTtutorialwindowForm.LoanWindowForm.resources
