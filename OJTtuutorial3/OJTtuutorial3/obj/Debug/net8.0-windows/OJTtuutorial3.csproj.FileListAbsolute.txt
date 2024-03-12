@@ -1,0 +1,17 @@
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\bin\Debug\net8.0-windows\OJTtuutorial3.exe
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\bin\Debug\net8.0-windows\OJTtuutorial3.deps.json
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\bin\Debug\net8.0-windows\OJTtuutorial3.runtimeconfig.json
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\bin\Debug\net8.0-windows\OJTtuutorial3.dll
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\bin\Debug\net8.0-windows\OJTtuutorial3.pdb
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.Form1.resources
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.csproj.GenerateResource.cache
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.AssemblyInfoInputs.cache
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.AssemblyInfo.cs
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.dll
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\refint\OJTtuutorial3.dll
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.pdb
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.genruntimeconfig.cache
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\ref\OJTtuutorial3.dll
+D:\Programming\Projects\OJTtuutorial3\OJTtuutorial3\obj\Debug\net8.0-windows\OJTtuutorial3.Properties.Resources.resources
