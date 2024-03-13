@@ -58,7 +58,7 @@ namespace OJTtuutorial3
             dataTable.Columns.Add("Address");
             GetNextStaffId();
             dgvStaff.DataSource = dataTable;
-
+            btnDelete.Visible= false;
 
         }
 
@@ -74,20 +74,37 @@ namespace OJTtuutorial3
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+                String staffName=txtStaffName.Text;
+
             if (String.IsNullOrWhiteSpace(txtStaffNo.Text) ||
-        String.IsNullOrWhiteSpace(txtStaffName.Text) ||
-        String.IsNullOrWhiteSpace(txtAge.Text) ||
-        String.IsNullOrWhiteSpace(txtAddress.Text) ||
-        String.IsNullOrWhiteSpace(txtNRC.Text) ||
-        String.IsNullOrWhiteSpace(txtPh1.Text))
+            String.IsNullOrWhiteSpace(staffName) ||
+            String.IsNullOrWhiteSpace(txtAge.Text) ||
+            String.IsNullOrWhiteSpace(txtAddress.Text) ||
+            String.IsNullOrWhiteSpace(txtNRC.Text) ||
+            String.IsNullOrWhiteSpace(txtPh1.Text))
             {
-                MessageBox.Show("All fields are required.");
+                MessageBox.Show("Name, Age, Address, NRC and At least One Phone Number must be filled!");
                 return;
             }
             else if (!long.TryParse(txtPh1.Text, out _) || !long.TryParse(txtPh2.Text, out _) || !int.TryParse(txtAge.Text, out int ageInt))
             {
                 MessageBox.Show("Age and Phone Numbers must be numeric.");
                 return;
+            }
+            else if (staffName.Any(char.IsDigit)){
+                MessageBox.Show("Name Should not include numbers!");
+            }
+            else if (txtStaffName.Text.Length>50)
+            {
+                MessageBox.Show("Name Should be 50 character most!");
+            }
+            else if(txtAddress.Text.Length>200)
+            {
+                MessageBox.Show("exceed maximum default! Please put adress Info within 200 characters!");
+            }
+            else if(ageInt<18||ageInt>100)
+            {
+                MessageBox.Show("Enter Valid Age Between 18 and 50!");
             }
             else if (txtNRC.Text.Length < 13)
             {
@@ -97,7 +114,7 @@ namespace OJTtuutorial3
             {
                 DateTime dob = dpDOB.Value;
                 DateTime Join = dpJoin.Value;
-                dataTable.Rows.Add(txtStaffNo.Text, pbStaff.Image, txtStaffName, Join, cbType.Text, txtNRC.Text, gender, txtAge.Text, txtPh1.Text, txtPh2.Text, txtAddress.Text);
+                dataTable.Rows.Add(txtStaffNo.Text, pbStaff.Image, txtStaffName.Text, Join, cbType.Text, txtNRC.Text, gender, ageInt, txtPh1.Text, txtPh2.Text, txtAddress.Text);
             }
 
             GetNextStaffId();
@@ -141,6 +158,7 @@ namespace OJTtuutorial3
 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnDelete.Visible = true;
             btnUpdate.Visible = true;
             btnAdd.Visible = false;
 
@@ -185,6 +203,7 @@ namespace OJTtuutorial3
         {
             index = dgvStaff.CurrentCell.RowIndex;
             dgvStaff.Rows.RemoveAt(index);
+            btnAdd.Visible=true;
         }
     }
 }

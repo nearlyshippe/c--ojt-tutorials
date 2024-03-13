@@ -305,6 +305,8 @@
             // 
             // dgvStaff
             // 
+            dgvStaff.AllowUserToAddRows = false;
+            dgvStaff.AllowUserToOrderColumns = true;
             dgvStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStaff.Location = new Point(12, 663);
             dgvStaff.Name = "dgvStaff";
