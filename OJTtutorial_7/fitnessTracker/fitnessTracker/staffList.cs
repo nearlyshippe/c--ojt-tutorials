@@ -20,11 +20,10 @@ namespace fitnessTracker
         private int recordsSize = 10;
         private int currentPageIndex = 1;
         private int totalPage = 0;
-        private string con = @"Data Source=DESKTOP-HUT694Q;Initial Catalog=staffTest;Integrated Security=True;";
         private SqlCommand cmd3;
         private SqlDataAdapter adapter;
         private DataTable staffData;
-        SqlConnection conn;
+        SqlConnection conn=new SqlConnection(@"Data Source=DESKTOP-HUT694Q;Initial Catalog=staffTest;Integrated Security=True;");
         String imagePath;
         public staffList()
         {
@@ -44,42 +43,30 @@ namespace fitnessTracker
         }
 
         private void loadStaffData()
-        {
-            try
-            {
-                staffData = new DataTable();
-                using (conn = new SqlConnection(con))
-                {
+        {            
+                    staffData = new DataTable();
                     conn.Open();
-                    SqlCommand cmd1 = new SqlCommand("Select ID,staffNo as [Staff No],staffName as [Staff Name],staffJoin as [Join From], CASE WHEN staffType=1 THEN 'Full-Time' ELSE 'Part-Time' END as [Staff Type],staffNRC as NRC, CASE WHEN staffGender = 1 THEN 'Male' ELSE 'Female' END AS Gender,staffPhone1 as [Phone No.],staffPhone2 as [Phone No.],staffAddress as Address from staffInfo ", conn);
-                    SqlCommand cmd2 = new SqlCommand("Select photo as [Image Path] from staffInfo", conn);
+                    SqlCommand cmd1 = new SqlCommand("Select ID,staffNo as [Staff No],staffName,staffJoin as [Join From], CASE WHEN staffType=1 THEN 'Full-Time' ELSE 'Part-Time' END as [Staff Type],staffNRC as NRC, CASE WHEN staffGender = 1 THEN 'Male' ELSE 'Female' END AS Gender,staffPhone1 as [Phone No.],staffPhone2 as [Phone No.],staffAddress as Address from staffInfo ", conn);
+                    //SqlCommand cmd2 = new SqlCommand("Select photo as [Image Path] from staffInfo", conn);
                     adapter = new SqlDataAdapter(cmd1);
-                    imagePath = cmd2.ExecuteScalar()?.ToString();
+                    //imagePath = cmd2.ExecuteScalar()?.ToString();
                     adapter.Fill(staffData);
                     this.CalculateTotalPages();
                     this.dgvList.ReadOnly = true;
                     dgvList.DataSource = staffData;
-                    conn.Close();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                    conn.Close();    
         }
 
         public void textFilter()
         {
-            using(conn = new SqlConnection(con))
-            {
+                staffData = new DataTable();
+                conn.Open();
                 string query = "Select ID,staffNo as [Staff No],staffName,staffJoin as [Join From], CASE WHEN staffType=1 THEN 'Full-Time' ELSE 'Part-Time' END as [Staff Type],staffNRC as NRC, CASE WHEN staffGender = 1 THEN 'Male' ELSE 'Female' END AS Gender,staffPhone1 as [Phone No.],staffPhone2 as [Phone No.],staffAddress as Address from staffInfo WHERE staffName = '" + txtSearch.Text + "'";
                 SqlCommand cmd4 = new SqlCommand(query, conn);
                 adapter = new SqlDataAdapter(cmd4);
                 adapter.Fill(staffData);
                 dgvList.DataSource = staffData;
                 conn.Close();
-            }
             
         }
         private object getCurrentRecords(int page, SqlConnection con)

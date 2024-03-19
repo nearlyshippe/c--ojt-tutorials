@@ -31,6 +31,7 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblNo = new System.Windows.Forms.Label();
             this.pbStaff = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbStaff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             this.lblNo.AutoSize = true;
             this.lblNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNo.Location = new System.Drawing.Point(374, 0);
+            this.lblNo.Location = new System.Drawing.Point(335, 9);
             this.lblNo.Name = "lblNo";
             this.lblNo.Size = new System.Drawing.Size(0, 32);
             this.lblNo.TabIndex = 1;
@@ -62,11 +63,22 @@
             this.pbStaff.TabIndex = 2;
             this.pbStaff.TabStop = false;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(431, 9);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 32);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // staffInfomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 467);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pbStaff);
             this.Controls.Add(this.lblNo);
             this.Controls.Add(this.lblWelcome);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblNo;
         private System.Windows.Forms.PictureBox pbStaff;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

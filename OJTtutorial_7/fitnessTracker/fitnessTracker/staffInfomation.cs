@@ -25,5 +25,12 @@ namespace fitnessTracker
             pbStaff.BackgroundImage=Image.FromFile(imagepath);
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            staffLogin login=new staffLogin();
+            this.Hide();
+            login.ShowDialog();
+        }
     }
 }
