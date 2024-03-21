@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="staffTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="staffInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="staffNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="staffName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="staffDob" Type="datetime" Nullable="false" />
+          <Property Name="staffJoin" Type="datetime" Nullable="false" />
+          <Property Name="staffType" Type="smallint" Nullable="false" />
+          <Property Name="staffNRC" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="staffGender" Type="smallint" Nullable="false" />
+          <Property Name="staffPhone1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="staffPhone2" Type="varchar" MaxLength="20" />
+          <Property Name="staffAddress" Type="varchar" MaxLength="200" />
+          <Property Name="photo" Type="varchar" MaxLength="500" />
+          <Property Name="is_deleted" Type="smallint" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="staffTestModelStoreContainer">
+          <EntitySet Name="staffInfo" EntityType="Self.staffInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="staffTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="staffInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="staffNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="staffName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="staffDob" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="staffJoin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="staffType" Type="Int16" Nullable="false" />
+          <Property Name="staffNRC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="staffGender" Type="Int16" Nullable="false" />
+          <Property Name="staffPhone1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="staffPhone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="staffAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="photo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="is_deleted" Type="Int16" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="staffTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="staffInfoes" EntityType="Self.staffInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="staffTestModelStoreContainer" CdmEntityContainer="staffTestEntities">
+          <EntitySetMapping Name="staffInfoes">
+            <EntityTypeMapping TypeName="staffTestModel.staffInfo">
+              <MappingFragment StoreEntitySet="staffInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="staffNo" ColumnName="staffNo" />
+                <ScalarProperty Name="staffName" ColumnName="staffName" />
+                <ScalarProperty Name="staffDob" ColumnName="staffDob" />
+                <ScalarProperty Name="staffJoin" ColumnName="staffJoin" />
+                <ScalarProperty Name="staffType" ColumnName="staffType" />
+                <ScalarProperty Name="staffNRC" ColumnName="staffNRC" />
+                <ScalarProperty Name="staffGender" ColumnName="staffGender" />
+                <ScalarProperty Name="staffPhone1" ColumnName="staffPhone1" />
+                <ScalarProperty Name="staffPhone2" ColumnName="staffPhone2" />
+                <ScalarProperty Name="staffAddress" ColumnName="staffAddress" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

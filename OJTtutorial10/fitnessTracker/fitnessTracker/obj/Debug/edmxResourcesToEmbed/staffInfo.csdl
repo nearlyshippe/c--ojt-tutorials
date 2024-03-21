@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="staffTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="staffInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="staffNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staffName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="staffDob" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="staffJoin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="staffType" Type="Int16" Nullable="false" />
+    <Property Name="staffNRC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staffGender" Type="Int16" Nullable="false" />
+    <Property Name="staffPhone1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staffPhone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="staffAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="is_deleted" Type="Int16" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="staffTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="staffInfoes" EntityType="Self.staffInfo" />
+  </EntityContainer>
+</Schema>

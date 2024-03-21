@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="staffTestModelStoreContainer" CdmEntityContainer="staffTestEntities">
+    <EntitySetMapping Name="staffInfoes">
+      <EntityTypeMapping TypeName="staffTestModel.staffInfo">
+        <MappingFragment StoreEntitySet="staffInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="staffNo" ColumnName="staffNo" />
+          <ScalarProperty Name="staffName" ColumnName="staffName" />
+          <ScalarProperty Name="staffDob" ColumnName="staffDob" />
+          <ScalarProperty Name="staffJoin" ColumnName="staffJoin" />
+          <ScalarProperty Name="staffType" ColumnName="staffType" />
+          <ScalarProperty Name="staffNRC" ColumnName="staffNRC" />
+          <ScalarProperty Name="staffGender" ColumnName="staffGender" />
+          <ScalarProperty Name="staffPhone1" ColumnName="staffPhone1" />
+          <ScalarProperty Name="staffPhone2" ColumnName="staffPhone2" />
+          <ScalarProperty Name="staffAddress" ColumnName="staffAddress" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

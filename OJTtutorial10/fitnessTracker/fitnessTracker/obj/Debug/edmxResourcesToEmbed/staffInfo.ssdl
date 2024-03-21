@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="staffTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="staffInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="staffNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="staffName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="staffDob" Type="datetime" Nullable="false" />
+    <Property Name="staffJoin" Type="datetime" Nullable="false" />
+    <Property Name="staffType" Type="smallint" Nullable="false" />
+    <Property Name="staffNRC" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="staffGender" Type="smallint" Nullable="false" />
+    <Property Name="staffPhone1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="staffPhone2" Type="varchar" MaxLength="20" />
+    <Property Name="staffAddress" Type="varchar" MaxLength="200" />
+    <Property Name="photo" Type="varchar" MaxLength="500" />
+    <Property Name="is_deleted" Type="smallint" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="staffTestModelStoreContainer">
+    <EntitySet Name="staffInfo" EntityType="Self.staffInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
